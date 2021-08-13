@@ -16,19 +16,17 @@ ui <- fluidPage(
     titlePanel("Open Statistical Package"),
 
     # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
+    fluidPage( 
+        tabsetPanel( 
+            tabPanel("Data",  gt_output(outputId = "datasetId")), 
+            tabPanel("Statistics", gt_output(outputId = "statisticsId")), 
+            tabPanel("Visualization", plotOutput(outputId = "ggplotId"))
         )
+    ),
+
+    # Show a plot of the generated distribution
+    mainPanel(
+        
     )
 )
 
