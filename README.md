@@ -4,6 +4,6 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-# Univariate Categorical Variable
+# Shiny Ipsum
 
-![](www/univariate-categorical.gif)
+[shinipsum](https://thinkr-open.github.io/shinipsum/)을 바탕으로 오픈 통계팩키지 UI 품평회를 준비합니다.
