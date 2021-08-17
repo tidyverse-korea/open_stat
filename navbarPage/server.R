@@ -6,8 +6,8 @@ server <- function(input, output, session) {
     output$image <- renderImage({
         random_image()
     })
-    output$analysis <- renderPlotly({
-        shinipsum::random_ggplotly()
+    output$plot <- renderPlotly({
+        random_ggplotly()
     })
     output$print <- renderPrint({
         random_print("model")
@@ -18,8 +18,4 @@ server <- function(input, output, session) {
     output$text <- renderText({
         random_text(nwords = 50)
     })
-    output$goodtext <- renderText({
-        random_text(nwords = 100)
-    })
-
 }
