@@ -18,4 +18,7 @@ server <- function(input, output, session) {
     output$text <- renderText({
         random_text(nwords = 50)
     })
+    output$hypo_text <- renderText({
+        random_text(nwords = 50)
+    })
 }
