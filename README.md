@@ -23,3 +23,9 @@
 # [`bslib`](https://rstudio.github.io/bslib/)
 
 [`bslib`](https://rstudio.github.io/bslib/) 팩키지를 사용하게 되면 실시간 폰트를 비롯한 여러 방식으로 결과를 변경시킬 수 있다.
+
+
+# `shiny.fluent`
+
+[`shiny.fluent` Tutorial](https://appsilon.com/shiny-fluent-tutorial/)
+
