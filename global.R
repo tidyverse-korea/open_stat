@@ -1,5 +1,4 @@
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
 library(glue)
 library(leaflet)
 library(plotly)
@@ -10,11 +9,15 @@ library(shiny.router)
 library(statdata)
 library(waffle)
 library(gt)
+library(ggtextures)
 
 
 # 1. Dataset ----
 
-gender <- statdata::gender
+# gender <- statdata::gender
+
+gender <- read_csv("www/025원시_성별.csv") %>% 
+    set_names("성별")
 
 gender_gt <- gender %>% 
     gt::gt()
