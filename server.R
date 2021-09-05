@@ -1,5 +1,7 @@
 server <- function(input, output, session) {
     
+    router$server(input, output, session)
+    
     # 제어 결과 필터링 리액티브 데이터프레임 ----------------------------
     filtered_gender <- reactive({
 
