@@ -60,8 +60,8 @@ gender_stat_gt <- gender %>%
 
 # 3. Visualization -----
 
-# gender_tbl <- gender %>% 
-#     count(성별, name = "명수")
+gender_tbl <- gender %>%
+    count(성별, name = "명수")
 
 # gender_barplot_gg <- gender_tbl %>% 
 #     ggplot(aes(x = 성별, y=명수)) +

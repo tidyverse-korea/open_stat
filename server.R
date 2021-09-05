@@ -80,15 +80,14 @@ server <- function(input, output, session) {
     output$imagePlotId <- renderPlot({
 
         count_gender() %>% 
-            mutate(image = list(
-                magick::image_read_svg("https://raw.githubusercontent.com/tidyverse-korea/pkg_doc/master/fig/man-svgrepo-com.svg"),
-                magick::image_read_svg("https://raw.githubusercontent.com/tidyverse-korea/pkg_doc/master/fig/woman-svgrepo-com.svg")
-            )) %>% 
+            mutate(image = if_else( str_detect(성별, "남"), list(magick::image_read_svg("https://raw.githubusercontent.com/tidyverse-korea/pkg_doc/master/fig/man-svgrepo-com.svg")),
+                                                            list(magick::image_read_svg("https://raw.githubusercontent.com/tidyverse-korea/pkg_doc/master/fig/woman-svgrepo-com.svg")))
+            ) %>% 
             ggplot(aes(x = 성별, y=명수, image = image)) +
-            geom_isotype_col() +
-            scale_fill_manual(name = NULL,
-                              values = c("#BA182A", "#FF8288"),
-                              labels = c("남자", "여자")) +
+            geom_isotype_col()  +
+            # scale_fill_manual(name = NULL,
+            #                   values = c("#BA182A", "#FF8288"),
+            #                   labels = c("남자", "여자")) +
             theme_bw(base_family = "NanumGothic")  +
             scale_y_continuous(limits = c(0,10), labels = scales::number_format(accuracy = 1))
         
