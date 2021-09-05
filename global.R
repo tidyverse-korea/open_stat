@@ -13,7 +13,7 @@ library(ggtextures)
 
 # 카드 제작 함수 ----------------------------------
 
-makeCard <- function(title, content, size = 12, style = "") {
+makeCard <- function(title, content, size = 3, style = "") {
     div(
         class = glue::glue("card ms-depth-8 ms-sm{size} ms-xl{size}"),
         style = style,

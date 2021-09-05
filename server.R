@@ -100,9 +100,9 @@ server <- function(input, output, session) {
         Stack(
             tokens = list(childrenGap = 10), 
             horizontal = TRUE,
-            makeCard("막대 그래프", div(style="max-height: 500px; overflow: auto", plotOutput("barPlotId"))),
-            makeCard("원 그래프", div(style="max-height: 500px; overflow: auto", plotOutput("piePlotId"))),
-            makeCard("와플 그래프", div(style="max-height: 500px; overflow: auto", plotOutput("wafflePlotId"))),
+            makeCard("막대 그래프",   div(style="max-height: 500px; overflow: auto", plotOutput("barPlotId"))),
+            makeCard("원 그래프",     div(style="max-height: 500px; overflow: auto", plotOutput("piePlotId"))),
+            makeCard("와플 그래프",   div(style="max-height: 500px; overflow: auto", plotOutput("wafflePlotId"))),
             makeCard("이미지 그래프", div(style="max-height: 500px; overflow: auto", plotOutput("imagePlotId")))            
         )
     })
